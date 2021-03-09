@@ -1,0 +1,21 @@
+@layout('layouts.main')
+@section('content')
+<div class="columns">
+
+    <h1>Meus links</h1>
+    <a href="{{ route('links.create') }}">Adicionar documento</a>
+    @if(links.length > 0)
+    <div class="columns">
+      @each(link in links)
+        <div class="column is-one-third">
+          <div class="box">
+            <p class="is-size-5"> <strong>{{ link.url }}</strong> </p>
+          </div>
+        </div>
+      @endeach
+    </div>
+  @else
+    <h1 class="subtitle is-5">Você não tem links cadastrados</h1>
+  @endif
+    
+@endsection

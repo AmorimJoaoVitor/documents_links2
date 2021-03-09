@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documents and Links</title>
+</head>
+<body>
+  <nav role="navigation">
+    <input type="checkbox" id="check">
+    <ul>
+        <li><h1>Store Documents and links</h1></li>
+        <li><a href="/">home</a></li>
+        <li><a href="{{ route('documents.index')}}">Meus documentos</a></li>
+        <li><a href="{{ route('links.index')}}">Meus links</a></li>
+        <li><a href="{{ route('app.indexLoginFront') }}">Login</a></li>
+    </ul>
+    <label for="check" class="checkbtn">
+        <!-- label para estilizar o icone "Hamburguer", label para O INPUT "check"  -->
+        <i class="fas fa-bars"></i>
+        <!--Chamando o icone do "hamburguer" na biblioteca, por isso a class= fas fa-bars  -->
+    </label>
+</nav>
+    <section class="section">
+        <div class="container">
+          @!section('content')
+        </div>
+      </section>
+</body>
+</html>

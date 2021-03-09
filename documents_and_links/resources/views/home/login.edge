@@ -1,0 +1,27 @@
+@layout('layouts.main')
+@section('content')
+<h1>Autenticação usando AdonisJS session</h1>
+<button id="btn-logout">Logout</button>
+<hr>
+    <form id="form-register">
+        <label>Username</label>
+        <input type="text" autofocus name ="username">
+        <label for="">Email</label>
+        <input type="text" name ="email">
+        <label>Senha:</label>
+        <input type="text" name ="password">
+        <button> Registrar</button>
+
+    </form>
+<hr>
+    <form id="form-login">
+        <label for="">Email</label>
+        <input type="text" name ="email">
+        <label>Senha:</label>
+        <input type="text" name ="password">
+        <button> login</button>
+
+    </form>
+@endsection
+<script src="index.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

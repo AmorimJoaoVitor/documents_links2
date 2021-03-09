@@ -1,0 +1,24 @@
+@layout('layouts.main')
+@section('content')
+<div class="columns">
+
+    <h1>Meus documentos</h1>
+    <a href="{{ route('documents.create') }}">Adicionar documento</a>
+    @if(documents.length > 0)
+    <div class="columns">
+      @each(document in documents)
+        <div class="column is-one-third">
+          <div class="box">
+            <p class="is-size-5"> <strong>{{ document.name }}</strong> </p>
+            <p class="is-size-7"> <i>[{{ document.extension }}]</i> </p>
+            <br />
+            <p class="is-6">{{ document.directory }}</p>
+          </div>
+        </div>
+      @endeach
+    </div>
+  @else
+    <h1 class="subtitle is-5">Você não tem documentos cadastrados</h1>
+  @endif
+    
+@endsection

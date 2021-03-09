@@ -1,0 +1,51 @@
+@layout('layouts.main')
+@section('content')
+<h1>Adicionando documento</h1>
+
+<form action="{{ route('documents.storeFront')}}" method="post">
+    {{--  {{ csrfField() }}  --}}
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="name">Nome</label>
+            <div class="control"> <input type="text" name="name"></div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="extension">Extensão</label>
+            <div class="control"> <input type="text" name="extension"> </div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="size">Tamanho do arquivo</label>
+            <div class="control"> <input type="number" name="size"></div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="directory">Diretório</label>
+            <div class="control"> <input type="text" name="directory"></div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="archives">Arquivos</label>
+            <div class="control"> <input type="text" name="archives"></div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <label for="fkUser">Fk usuário (jaja removo)</label>
+            <div class="control"> <input type="text" name="fkUser"> </div>
+        </div>
+    </div>
+    <div class="fields_container">
+        <div class="fields_box">
+            <button type="submit">Salvar</button>
+            <a href="{{ route('documents.index')}}">Cancelar</a>
+        </div>
+    </div>
+
+
+</form>
